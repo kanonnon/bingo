@@ -1,0 +1,30 @@
+<div class="top-page">
+  <% if @current_user %>
+    <%= link_to(" おてつだいランキング", "/user/index", {class: "ranking"}) %>
+    <a href="game/index" class="game-index">さあ、おてつだいをしよう</a>
+    <a href="/howtoplay" class="tohowtoplay">あそびかたとルール</a>
+    <div class="footer">
+      <ul>
+        <li><%= link_to("ログアウト", "/logout", method: :post, data: {confirm: "本当にログアウトしますか？"}, class: "logout") %></li>
+        <li><a href="https://twitter.com/ry_oO275" class="fa fa-twitter"> Twitterをフォローする</a></li>
+        <li><a href="https://www.instagram.com/ry_oO275" class="fa fa-instagram"> Instagramをフォローする</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdw7XoVeVHN3ACMpav9DTUsHW8JauYGCQnIRFzuiCqzvCcF7Q/viewform">意見を送る</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScreIe8goItPCIqhHhEoJnX0k9gG_KIq3fVwQGHoIqCS40Ssw/viewform">アカウントに問題が生じた場合</a></li>
+      </ul>
+    </div>
+  <% else %>
+    <div class="signup_and_login">
+      <%= link_to("新規登録", "/signup") %>
+      <%= link_to("ログイン", "/login") %>
+    </div>
+    <a href="/about">おてつだいビンゴって？</a>
+    <div class="footer">
+      <ul>
+        <li><a href="https://twitter.com/ry_oO275" class="fa fa-twitter"> Twitterをフォローする</a></li>
+        <li><a href="https://www.instagram.com/ry_oO275" class="fa fa-instagram"> Instagramをフォローする</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdw7XoVeVHN3ACMpav9DTUsHW8JauYGCQnIRFzuiCqzvCcF7Q/viewform">意見を送る</a></li>
+      </ul>
+    </div>
+  <% end %>
+  <footer><p>&copy; Kanon</p></footer>
+</div>

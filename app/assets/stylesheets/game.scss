@@ -1,0 +1,113 @@
+@charset "UTF-8";
+body{
+	font-family:Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.link {
+  text-align: center;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link a {
+  text-decoration: none;
+  font-size: 4vw;
+  text-align: center;
+  background-color: #d9ffc9;
+  color: #7d6a79;
+  padding: 3vw;
+  margin: 3vw;
+	width: 80%;
+	box-shadow: 0 2px 6px #c1ced7;
+}
+
+#wrapper{
+	width: 75vw;
+	margin:0 auto;
+}
+
+header{
+	position:relative;
+	color:#7d6a79;
+	font-weight:bold;
+}
+
+h1{
+	padding: 8vw 0 4vw;
+	text-align:center;
+	font-size:5vw;
+  color:#7d6a79;
+}
+
+#score {
+	color: #7d6a79;
+	font-size: 4vw;
+}
+
+.save {
+	font-size: 3vw;
+	text-decoration: none;
+	color: #7d6a79;
+	padding: 1vw 3vw;
+	margin-left: auto;
+	margin-bottom: 8vw;
+	border-radius: 2vw;
+	box-shadow: 0 2px 6px #c1ced7;
+}
+
+.score-and-save {
+	display: flex;
+}
+
+.score-and-save p {
+	margin-top: 2vw;
+}
+
+#game{
+	position:relative;
+}
+
+#numbers img{
+  width: 14.5vw;
+  height: 14.5vw;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	float: left;
+	cursor: pointer;
+  filter: saturate(0%);
+}
+
+#numbers img.hit{
+	filter: saturate(100%);
+}
+
+#startScene{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 75vw;
+	height: 75vw;
+	background:#d9ffc9;
+}
+
+.start-button {
+  margin: 32vw;
+  margin-left: auto;
+  margin-right: auto;
+	display: block;
+	border: none;
+	color: #7d6a79;
+	background-color: #fffbc9;
+	border-radius: 2vw;
+	font-size: 4vw;
+	font-weight: bold;
+	padding: 2vw 5vw;
+	cursor: pointer;
+	box-shadow: 0 2px 6px #c1ced7;
+}
+
+button:focus{
+	outline:none;
+}

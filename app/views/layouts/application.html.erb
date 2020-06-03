@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bingo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <a href="/" class="logo">おてつだいビンゴ</a>
+      <div class="h-user-info">
+        <% if @current_user %>
+        <img src="<%= "/user_images/#{@current_user.image_name}" %>" class="h-user-image">
+        <%= link_to(@current_user.name, "/user/#{@current_user.id}", {class: "h-user-name"}) %>
+        <% end %>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
