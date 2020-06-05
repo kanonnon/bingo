@@ -19,7 +19,7 @@ class UserController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
-      image_name: "member4.jpg",
+      image_name: "default_user_image.png",
       password: params[:password],
       first: 0,
       second: 0,
@@ -27,7 +27,6 @@ class UserController < ApplicationController
       fourth: 0)
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/")
     else
       render("user/new")
@@ -50,7 +49,6 @@ class UserController < ApplicationController
     end
 
     if @user.save
-      flash[:notice] = "ユーザー情報を編集しました"
       redirect_to("/user/#{@user.id}")
     else
       render("user/edit")
@@ -64,7 +62,6 @@ class UserController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      flash[:notice] = "ログインしました"
       redirect_to("/game/index")
     else
       @error_message = "メールアドレスまたはパスワードが間違っています"
@@ -76,20 +73,18 @@ class UserController < ApplicationController
 
   def logout
     session[:user_id] = nil
-    flash[:notice] = "ログアウトしました"
     redirect_to("/login")
   end
 
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
-      flash[:notice] = "権限がありません"
       redirect_to("/")
     end
   end
 
   def save_first
     @user = User.find_by(id: @current_user.id)
-    @user.first = cookies["score"]
+    @user.update( first: cookies[:score])
   end
 
   def save_second
