@@ -85,6 +85,7 @@ class UserController < ApplicationController
   def save_first
     @user = User.find_by(id: @current_user.id)
     @user.update( first: cookies[:score])
+    redirect_to("/game/index")
   end
 
   def save_second

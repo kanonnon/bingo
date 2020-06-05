@@ -4,6 +4,7 @@ class GameController < ApplicationController
 
   def first
     @first = cookies["score"]
+    @user = User.find_by(id: @current_user.id)
   end
 
   def second

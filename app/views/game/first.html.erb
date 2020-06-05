@@ -3,7 +3,7 @@
     <h1>おてつだい</h1>
     <div><%= @first %></div>
     <div class="score-and-save">
-      <p id="score">Score : <span>0</span></p>
+      <p id="score">Score : <span><%= @current_user.first %></span></p>
       <%= link_to("保存", "/user/save_first", method: :post, data: {confirm: "終了しますか？"},  class: "save") %>
     </div>
     <div id="game">
@@ -43,7 +43,7 @@
 
 
 <script type="text/javascript">
-  var score = 0;
+  var score = <%= @current_user.first %>;
   var hitNum = [];
   $(function() {
 
@@ -433,7 +433,7 @@
         }
         hitNum.push("22");
       });
-      $("23").one('click', function(){
+      $("#23").one('click', function(){
         if ($("#21").hasClass("hit") && $("#22").hasClass("hit") && $("#24").hasClass("hit") && $("#25").hasClass("hit")){
           score += 50;
           $("#score span").html(score);
