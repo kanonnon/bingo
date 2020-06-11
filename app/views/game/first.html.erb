@@ -1,7 +1,6 @@
 <div class="body first">
   <div id="wrapper">
     <h1>おてつだい</h1>
-    <div><%= @first %></div>
     <div class="score-and-save">
       <p id="score">Score : <span><%= @current_user.first %></span></p>
       <%= link_to("保存", "/user/save_first", method: :post, data: {confirm: "終了しますか？"},  class: "save") %>
@@ -14,13 +13,13 @@
         <img src="/game_first/img4.jpg" alt="" id="4">
         <img src="/game_first/img5.jpg" alt="" id="5">
         <img src="/game_first/img6.jpg" alt="" id="6">
-        <img src="/img7.jpg" alt="" id="7">
-        <img src="/img8.jpg" alt="" id="8">
-        <img src="/img9.jpg" alt="" id="9">
-        <img src="/img10.jpg" alt="" id="10">
-        <img src="/img11.jpg" alt="" id="11">
-        <img src="/img12.jpg" alt="" id="12">
-        <img src="/img13.jpg" alt="" id="13">
+        <img src="/game_first/img7.jpg" alt="" id="7">
+        <img src="/game_first/img8.jpg" alt="" id="8">
+        <img src="/game_first/img9.jpg" alt="" id="9">
+        <img src="/game_first/img10.jpg" alt="" id="10">
+        <img src="/game_first/img11.jpg" alt="" id="11">
+        <img src="/game_first/img12.jpg" alt="" id="12">
+        <img src="/game_first/img13.jpg" alt="" id="13">
         <img src="/img14.jpg" alt="" id="14">
         <img src="/img15.jpg" alt="" id="15">
         <img src="/img16.jpg" alt="" id="16">
@@ -45,15 +44,95 @@
 <script type="text/javascript">
   var score = <%= @current_user.first %>;
   var hitNum = [];
-  $(function() {
+  
 
+  $(function() {
+  
     //スタート画面準備
     $("button").click(function(){
       $("#startScene").hide();
+
+      if(gon.first_1 == 1) {
+        $("#1").addClass("hit");
+      }
+      if(gon.first_2 == 2) {
+        $("#2").addClass("hit");
+      }
+      if(gon.first_3 == 3) {
+        $("#3").addClass("hit");
+      }
+      if(gon.first_4 == 4) {
+        $("#4").addClass("hit");
+      }
+      if(gon.first_5 == 5) {
+        $("#5").addClass("hit");
+      }
+      if(gon.first_6 == 6) {
+        $("#6").addClass("hit");
+      }
+      if(gon.first_7 == 7) {
+        $("#7").addClass("hit");
+      }
+      if(gon.first_8 == 8) {
+        $("#8").addClass("hit");
+      }
+      if(gon.first_9 == 9) {
+        $("#9").addClass("hit");
+      }
+      if(gon.first_10 == 10) {
+        $("#10").addClass("hit");
+      }
+      if(gon.first_11 == 11) {
+        $("#11").addClass("hit");
+      }
+      if(gon.first_12 == 12) {
+        $("#12").addClass("hit");
+      }
+      if(gon.first_13 == 13) {
+        $("#13").addClass("hit");
+      }
+      if(gon.first_14 == 14) {
+        $("#14").addClass("hit");
+      }
+      if(gon.first_15 == 15) {
+        $("#15").addClass("hit");
+      }
+      if(gon.first_16 == 16) {
+        $("#16").addClass("hit");
+      }
+      if(gon.first_17 == 17) {
+        $("#17").addClass("hit");
+      }
+      if(gon.first_18 == 18) {
+        $("#18").addClass("hit");
+      }
+      if(gon.first_19 == 19) {
+        $("#19").addClass("hit");
+      }
+      if(gon.first_20 == 20) {
+        $("#20").addClass("hit");
+      }
+      if(gon.first_21 == 21) {
+        $("#21").addClass("hit");
+      }
+      if(gon.first_22 == 22) {
+        $("#22").addClass("hit");
+      }
+      if(gon.first_23 == 23) {
+        $("#23").addClass("hit");
+      }
+      if(gon.first_24 == 24) {
+        $("#24").addClass("hit");
+      }
+      if(gon.first_25 == 25) {
+        $("#25").addClass("hit");
+      }
+
+      
       $("#numbers img").click(function(){
           $(this).addClass("hit");
       });
-
+      
       $("#1").one('click', function(){
         if ($("#2").hasClass("hit") && $("#3").hasClass("hit") && $("#4").hasClass("hit") && $("#5").hasClass("hit")){
           score += 50;
@@ -490,7 +569,8 @@
 
 $(document).ready(function() {
   $(".save").click(function(){
-    $.cookie('score', score);
+    $.cookie('firstScore', score);
+    $.cookie('hitNum', hitNum);
   });
 });
 </script>

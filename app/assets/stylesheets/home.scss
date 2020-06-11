@@ -8,11 +8,14 @@
 
 .top-page a {
   text-decoration: none;
-  font-size: 3vw;
+  font-size: 4vw;
   text-align: center;
   color: #7d6a79;
   padding: 10px;
   box-shadow: 0 2px 6px #c1ced7;
+  border-radius: 2vw;
+  margin-top: 3vw;
+  padding: 2vw 8vw;
 }
 
 .signup_and_login {
@@ -39,7 +42,6 @@
 }
 
 .game-index {
-  width: 50%;
   margin: 10px auto 10px auto;
   background-color: #d9ffc9;
 }
@@ -85,6 +87,9 @@
 
 .footer ul li a {
   box-shadow: none;
+  margin-top: 0;
+  padding: 1vw;
+  font-size: 3vw;
 }
 
 footer {

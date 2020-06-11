@@ -84,9 +84,88 @@ class UserController < ApplicationController
 
   def save_first
     @user = User.find_by(id: @current_user.id)
-    @user.update( first: cookies[:score])
+    @user.update(first: cookies[:firstScore])
     redirect_to("/game/index")
-    logger.debug(cookies[:score])
+    logger.debug(cookies[:firstScore])
+    @hitNum = cookies["hitNum"]
+    if @hitNum.include?("1")
+      @user.update(first_1: "1")
+    end
+    if @hitNum.include?("2")
+      @user.update(first_2: "2")
+    end
+    if @hitNum.include?("3")
+      @user.update(first_3: "3")
+    end
+    if @hitNum.include?("4")
+      @user.update(first_4: "4")
+    end
+    if @hitNum.include?("5")
+      @user.update(first_5: "5")
+    end
+    if @hitNum.include?("6")
+      @user.update(first_6: "6")
+    end
+    if @hitNum.include?("7")
+      @user.update(first_7: "7")
+    end
+    if @hitNum.include?("8")
+      @user.update(first_8: "8")
+    end
+    if @hitNum.include?("9")
+      @user.update(first_9: "9")
+    end
+    if @hitNum.include?("10")
+      @user.update(first_10: "10")
+    end
+    if @hitNum.include?("11")
+      @user.update(first_11: "11")
+    end
+    if @hitNum.include?("12")
+      @user.update(first_12: "12")
+    end
+    if @hitNum.include?("13")
+      @user.update(first_13: "13")
+    end
+    if @hitNum.include?("3")
+      @user.update(first_3: "3")
+    end
+    if @hitNum.include?("14")
+      @user.update(first_14: "14")
+    end
+    if @hitNum.include?("15")
+      @user.update(first_15: "15")
+    end
+    if @hitNum.include?("16")
+      @user.update(first_16: "16")
+    end
+    if @hitNum.include?("17")
+      @user.update(first_17: "17")
+    end
+    if @hitNum.include?("18")
+      @user.update(first_18: "18")
+    end
+    if @hitNum.include?("19")
+      @user.update(first_19: "19")
+    end
+    if @hitNum.include?("20")
+      @user.update(first_20: "20")
+    end
+    if @hitNum.include?("21")
+      @user.update(first_21: "21")
+    end
+    if @hitNum.include?("22")
+      @user.update(first_22: "22")
+    end
+    if @hitNum.include?("23")
+      @user.update(first_23: "23")
+    end
+    if @hitNum.include?("24")
+      @user.update(first_24: "24")
+    end
+    if @hitNum.include?("25")
+      @user.update(first_25: "25")
+    end
   end
 
   def save_second
