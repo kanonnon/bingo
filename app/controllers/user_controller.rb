@@ -126,9 +126,6 @@ class UserController < ApplicationController
     if @hitNum.include?("13")
       @user.update(first_13: "13")
     end
-    if @hitNum.include?("3")
-      @user.update(first_3: "3")
-    end
     if @hitNum.include?("14")
       @user.update(first_14: "14")
     end
