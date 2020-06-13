@@ -85,7 +85,6 @@ class UserController < ApplicationController
   def save_first
     @user = User.find_by(id: @current_user.id)
     @user.update(first: cookies[:firstScore])
-    redirect_to("/game/index")
     logger.debug(cookies[:firstScore])
     @hitNum = cookies["hitNum"]
     if @hitNum.include?("1")
@@ -166,6 +165,13 @@ class UserController < ApplicationController
     if @hitNum.include?("25")
       @user.update(first_25: "25")
     end
+
+    if @user.save
+      redirect_to("/game/index")
+    else
+      render("/game/first")
+    end
+
   end
 
   def save_second
@@ -179,5 +185,6 @@ class UserController < ApplicationController
   def save_fourth
     redirect_to("/game/index")
   end
+
 
 end
