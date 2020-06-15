@@ -1,6 +1,7 @@
 <div class="body first">
   <div id="wrapper">
     <h1>おてつだい</h1>
+    <p><%= @hitNum %></p>
     <div class="score-and-save">
       <p id="score">Score : <span><%= @current_user.first %></span></p>
       <%= link_to("保存", "/user/save_first", method: :post, data: {confirm: "終了しますか？"},  class: "save") %>

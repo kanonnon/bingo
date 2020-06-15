@@ -3,6 +3,7 @@ class GameController < ApplicationController
   end
 
   def first
+    @hitNum = cookies["hitNum"]
     @user = User.find_by(id: @current_user.id)
     gon.first_1 = @current_user.first_1
     gon.first_2 = @current_user.first_2
