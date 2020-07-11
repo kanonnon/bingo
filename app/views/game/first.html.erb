@@ -1,41 +1,40 @@
 <div class="body first">
   <div id="wrapper">
     <h1>おてつだい</h1>
-    <p><%= @hitNum %></p>
     <div class="score-and-save">
-      <p id="score">Score : <span><%= @current_user.first %></span></p>
-      <%= link_to("保存", "/user/save_first", method: :post, data: {confirm: "終了しますか？"},  class: "save") %>
+      <p id="score">スコア : <span><%= @current_user.first %></span></p>
+      <a class="save">保存</a>
     </div>
     <div id="game">
       <div id="numbers">
-        <img src="/game_first/img1.jpg" alt="" id="1">
-        <img src="/game_first/img2.jpg" alt="" id="2">
-        <img src="/game_first/img3.jpg" alt="" id="3">
-        <img src="/game_first/img4.jpg" alt="" id="4">
-        <img src="/game_first/img5.jpg" alt="" id="5">
-        <img src="/game_first/img6.jpg" alt="" id="6">
-        <img src="/game_first/img7.jpg" alt="" id="7">
-        <img src="/game_first/img8.jpg" alt="" id="8">
-        <img src="/game_first/img9.jpg" alt="" id="9">
-        <img src="/game_first/img10.jpg" alt="" id="10">
-        <img src="/game_first/img11.jpg" alt="" id="11">
-        <img src="/game_first/img12.jpg" alt="" id="12">
-        <img src="/game_first/img13.jpg" alt="" id="13">
-        <img src="/img14.jpg" alt="" id="14">
-        <img src="/img15.jpg" alt="" id="15">
-        <img src="/img16.jpg" alt="" id="16">
-        <img src="/img17.jpg" alt="" id="17">
-        <img src="/img18.jpg" alt="" id="18">
-        <img src="/img19.jpg" alt="" id="19">
-        <img src="/img20.jpg" alt="" id="20">
-        <img src="/img21.jpg" alt="" id="21">
-        <img src="/img22.jpg" alt="" id="22">
-        <img src="/img23.jpg" alt="" id="23">
-        <img src="/img24.jpg" alt="" id="24">
-        <img src="/img25.gif" alt="" id="25">
+        <img src="/game_first/image1.jpg" alt="" id="1">
+        <img src="/game_first/image2.jpg" alt="" id="2">
+        <img src="/game_first/image3.jpg" alt="" id="3">
+        <img src="/game_first/image4.jpg" alt="" id="4">
+        <img src="/game_first/image5.jpg" alt="" id="5">
+        <img src="/game_first/image6.jpg" alt="" id="6">
+        <img src="/game_first/image7.jpg" alt="" id="7">
+        <img src="/game_first/image8.jpg" alt="" id="8">
+        <img src="/game_first/image9.jpg" alt="" id="9">
+        <img src="/game_first/image10.jpg" alt="" id="10">
+        <img src="/game_first/image11.jpg" alt="" id="11">
+        <img src="/game_first/image12.jpg" alt="" id="12">
+        <img src="/game_first/image13.jpg" alt="" id="13">
+        <img src="/game_first/image14.jpg" alt="" id="14">
+        <img src="/game_first/image15.jpg" alt="" id="15">
+        <img src="/game_first/image16.jpg" alt="" id="16">
+        <img src="/game_first/image17.jpg" alt="" id="17">
+        <img src="/game_first/image18.jpg" alt="" id="18">
+        <img src="/game_first/image19.jpg" alt="" id="19">
+        <img src="/game_first/image20.jpg" alt="" id="20">
+        <img src="/game_first/image21.jpg" alt="" id="21">
+        <img src="/game_first/image1.jpg" alt="" id="22">
+        <img src="/game_first/image1.jpg" alt="" id="23">
+        <img src="/game_first/image1.jpg" alt="" id="24">
+        <img src="/game_first/image1.jpg" alt="" id="25">
       </div>
       <div id="startScene">
-        <button class="start-button">START</button>
+        <button class="start-button">スタート</button>
       </div>
     </div>
   </div>
@@ -43,12 +42,10 @@
 
 
 <script type="text/javascript">
-  var score = <%= @current_user.first %>;
+  var score = <%= @current_user.first ||= 0 %>;
   var hitNum = [];
   
 
-  $(function() {
-  
     //スタート画面準備
     $("button").click(function(){
       $("#startScene").hide();
@@ -565,14 +562,19 @@
         hitNum.push("25");
       });
     });
+  
 
-});
-
-$(document).ready(function() {
-  $(".save").click(function(){
-    $.cookie('firstScore', score);
-    $.cookie('hitNum', hitNum);
+  $(".save").click(function () {
+    $.ajax({
+      url: "/user/save_first",
+      type: "POST",
+      data: {firstScore : score, hitNum : hitNum},
+      datatype: "html",
+      success: function (data) {
+      //成功時の処理
+      },error: function(data){
+      //失敗時の処理
+      }
+    });
   });
-});
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>

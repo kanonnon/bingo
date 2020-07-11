@@ -45,8 +45,12 @@ header {
 }
 
 .h-user-image {
-  height: 4vh;
   margin-right: 2vw;
+  width: 8vw;
+  height: 8vw;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
 }
 
 .h-user-info {
