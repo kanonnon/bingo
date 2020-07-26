@@ -67,3 +67,7 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 
 gem 'gon'
+
+group :production do 
+  gem 'pg'
+end

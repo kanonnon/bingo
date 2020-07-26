@@ -3,6 +3,22 @@
     <%= link_to(" おてつだいランキング", "/user/index", {class: "ranking"}) %>
     <a href="game/index" class="game-index">さあ、おてつだいをしよう</a>
     <a href="/howtoplay" class="tohowtoplay">あそびかたとルール</a>
+    <div class="character-center">
+      <div class="character">
+        <div class="character-img">
+          <img src="/img/top1.png" alt="">
+          <p>わたしといっしょに<br>おてつだいをして<br>おてつだいマスターに<br>なっちゃおう！</p>
+        </div>
+        <div class="character-img">
+          <p>たくさん<br>おてつだいをしたら<br>かぞくに<br>ほめられるかも！？</p>
+          <img src="/img/top2.png" alt="" id="img-right">
+        </div>
+        <div class="character-img">
+          <img src="/img/top3.png" alt="">
+          <p>ぼくのおてつだいが<br>かぞくのために<br>なりますように！</p>
+        </div>
+      </div>
+    </div>
     <div class="footer">
       <ul>
         <li><%= link_to("ログアウト", "/logout", method: :post, data: {confirm: "本当にログアウトしますか？"}, class: "logout") %></li>
@@ -17,7 +33,9 @@
       <%= link_to("新規登録", "/signup") %>
       <%= link_to("ログイン", "/login") %>
     </div>
-    <a href="/about">おてつだいビンゴって？</a>
+    <div class="enjoy-helping"><p>たのしくおてつだいをしよう！</p></div>
+    <img src="/img/howto5.png" alt="" class="howto5">
+    <a href="/about" class="what_is_bibgo">おてつだいビンゴって？</a>
     <div class="footer">
       <ul>
         <li><a href="https://twitter.com/ry_oO275" class="fa fa-twitter"> Twitterをフォローする</a></li>

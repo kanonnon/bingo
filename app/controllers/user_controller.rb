@@ -4,7 +4,7 @@ class UserController < ApplicationController
   before_action :ensure_correct_user, {only: [:edit, :update]}
 
   def index
-    @users = User.all
+    @users = User.all.order(first: "DESC")
   end
 
   def show
@@ -97,8 +97,8 @@ class UserController < ApplicationController
     logger.debug(hitNum)
     logger.debug("================")
 
-   
-  
+
+
 
 
     @hitNum = cookies["hitNum"]

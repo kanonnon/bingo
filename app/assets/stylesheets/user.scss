@@ -38,6 +38,17 @@
   vertical-align: middle;
 }/*ユーザー一覧の名前*/
 
+.name_score {
+  display: flex;
+  align-items: center;
+}
+
+.name_score p {
+  margin-left: auto;
+  font-size: 4vw;
+  color: #7d6a79;
+}
+
 .user-right a {
   text-decoration: none;
   font-size: 4vw;

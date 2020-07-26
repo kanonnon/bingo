@@ -8,13 +8,12 @@
 
 .top-page a {
   text-decoration: none;
-  font-size: 4vw;
   text-align: center;
   color: #7d6a79;
   padding: 10px;
   box-shadow: 0 2px 6px #c1ced7;
   border-radius: 2vw;
-  margin-top: 3vw;
+  margin-top: 4vw;
   padding: 2vw 8vw;
 }
 
@@ -25,9 +24,10 @@
 }
 
 .signup_and_login a {
-  margin: 3vw auto 2vw auto;
+  margin: 3vw auto 1vw auto;
   background-color: #fffec9;
   padding: 2vw 8vw;
+  font-size: 3vw;
 }
 
 .about_bingo {
@@ -36,42 +36,117 @@
 }
 
 .ranking {
-  margin-right: 20px;
-  margin-left: auto;
   background-color: #fffbc9;
+  font-size: 5vw;
   /*ackground-image: url("/img/crown.png");*/
 }
 
 .game-index {
   margin: 10px auto 10px auto;
   background-color: #d9ffc9;
+  font-weight: bold;
+  font-size: 6vw;
+}
+
+.howto5 {
+  margin-top: 5vw;
+  margin-bottom: 5px;
+  box-shadow: 0 0 20px 6px rgba(0,0,0,0.1);
+}
+
+.enjoy-helping p {
+  font-size: 4vw;
+  color:#7d6a79;
+}
+
+.character-center {
+  margin-left: 10vw;
+  margin-top: 10vw;
+}
+
+.character img {
+  width: 30%;
+  margin-top: 10vw;
+  margin: 5vw;
+}
+
+.character p {
+  font-size: 4vw;
+  color: #7d6a79;
+  margin: 5vw;
+}
+
+.character-img {
+  display: flex;
+  align-items: center;
+}
+
+.tohowtoplay {
+  font-size: 5vw;
+  background-color: #c9fff1;
+}
+
+.what_is_bibgo {
+  font-size: 3vw;
+  margin-top: 7vw;
 }
 
 /*HOWTOPLAY*/
 .howtoplay h2 {
   font-size: 5vw;
+  text-align: center;
 }
 
-.howtoplay li {
-  font-size: 3vw;
+.howtoplay-open {
+  margin-bottom: 10vw;
+}
+
+.howtoplay-score {
+  margin-bottom: 10vw;
+}
+
+.howtoplay .img-center {
+  text-align: center;
+}
+
+.howtoplay img {
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+  width: 60%;
+}
+
+.howtoplay-open p {
+  font-size: 4vw;
+  text-align: center;
+  color: #7d6a79;
+}
+
+.howtoplay-score p {
+  font-size: 4vw;
+  text-align: center;
+  color: #7d6a79;
 }
 
 .howtoplay ul {
-  list-style: none;
   text-align: center;
-  margin-bottom: 8vw;
+  margin-bottom: 10vw;
 }
 
 .howtoplay a {
   text-decoration: none;
-  align-items: center;
+  font-size: 3vw;
+}
+
+.howtoplay-footer p {
+  font-size: 1.58vw;
+  text-align: center;
 }
 
 /*FOOTER*/
 
 .footer {
   width: 100%;
-  margin-top: 200vw;
+  margin-top: 10vw;
   background-color: #fff;
   border-top: solid 1px #eee;
 }

@@ -3,35 +3,35 @@
     <h1>おてつだい</h1>
     <div class="score-and-save">
       <p id="score">スコア : <span><%= @current_user.first %></span></p>
-      <a class="save">保存</a>
+      <a class="save">ほぞん</a>
     </div>
     <div id="game">
       <div id="numbers">
-        <img src="/game_first/image1.jpg" alt="" id="1">
-        <img src="/game_first/image2.jpg" alt="" id="2">
-        <img src="/game_first/image3.jpg" alt="" id="3">
-        <img src="/game_first/image4.jpg" alt="" id="4">
-        <img src="/game_first/image5.jpg" alt="" id="5">
-        <img src="/game_first/image6.jpg" alt="" id="6">
-        <img src="/game_first/image7.jpg" alt="" id="7">
-        <img src="/game_first/image8.jpg" alt="" id="8">
-        <img src="/game_first/image9.jpg" alt="" id="9">
-        <img src="/game_first/image10.jpg" alt="" id="10">
-        <img src="/game_first/image11.jpg" alt="" id="11">
-        <img src="/game_first/image12.jpg" alt="" id="12">
-        <img src="/game_first/image13.jpg" alt="" id="13">
-        <img src="/game_first/image14.jpg" alt="" id="14">
-        <img src="/game_first/image15.jpg" alt="" id="15">
-        <img src="/game_first/image16.jpg" alt="" id="16">
-        <img src="/game_first/image17.jpg" alt="" id="17">
-        <img src="/game_first/image18.jpg" alt="" id="18">
-        <img src="/game_first/image19.jpg" alt="" id="19">
-        <img src="/game_first/image20.jpg" alt="" id="20">
-        <img src="/game_first/image21.jpg" alt="" id="21">
-        <img src="/game_first/image1.jpg" alt="" id="22">
-        <img src="/game_first/image1.jpg" alt="" id="23">
-        <img src="/game_first/image1.jpg" alt="" id="24">
-        <img src="/game_first/image1.jpg" alt="" id="25">
+        <a class="click1"><img src="/game_first/image1.jpg" alt="" id="1"></a>
+        <a class="click2"><img src="/game_first/image2.jpg" alt="" id="2"></a>
+        <a class="click3"><img src="/game_first/image3.jpg" alt="" id="3"></a>
+        <a class="click4"><img src="/game_first/image4.jpg" alt="" id="4"></a>
+        <a class="click5"><img src="/game_first/image5.jpg" alt="" id="5"></a>
+        <a class="click6"><img src="/game_first/image6.jpg" alt="" id="6"></a>
+        <a class="click7"><img src="/game_first/image7.jpg" alt="" id="7"></a>
+        <a class="click8"><img src="/game_first/image8.jpg" alt="" id="8"></a>
+        <a class="click9"><img src="/game_first/image9.jpg" alt="" id="9"></a>
+        <a class="click10"><img src="/game_first/image10.jpg" alt="" id="10"></a>
+        <a class="click11"><img src="/game_first/image11.jpg" alt="" id="11"></a>
+        <a class="click12"><img src="/game_first/image12.jpg" alt="" id="12"></a>
+        <a class="click13"><img src="/game_first/image13.jpg" alt="" id="13"></a>
+        <a class="click14"><img src="/game_first/image14.jpg" alt="" id="14"></a>
+        <a class="click15"><img src="/game_first/image15.jpg" alt="" id="15"></a>
+        <a class="click16"><img src="/game_first/image16.jpg" alt="" id="16"></a>
+        <a class="click17"><img src="/game_first/image17.jpg" alt="" id="17"></a>
+        <a class="click18"><img src="/game_first/image18.jpg" alt="" id="18"></a>
+        <a class="click19"><img src="/game_first/image19.jpg" alt="" id="19"></a>
+        <a class="click20"><img src="/game_first/image20.jpg" alt="" id="20"></a>
+        <a class="click21"><img src="/game_first/image21.jpg" alt="" id="21"></a>
+        <a class="click22"><img src="/game_first/image22.jpg" alt="" id="22"></a>
+        <a class="click23"><img src="/game_first/image23.jpg" alt="" id="23"></a>
+        <a class="click24"><img src="/game_first/image24.jpg" alt="" id="24"></a>
+        <a class="click25"><img src="/game_first/image25.jpg" alt="" id="25"></a>
       </div>
       <div id="startScene">
         <button class="start-button">スタート</button>
@@ -42,9 +42,363 @@
 
 
 <script type="text/javascript">
+
+  document.querySelector('.click1').onclick = function(){
+    swal({
+      title: "トイレそうじをした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image1.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit1();
+      }
+    });
+  };
+  document.querySelector('.click2').onclick = function(){
+    swal({
+      title: "おもちゃをかたづけた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image2.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit2();
+      }
+    });
+  };
+  document.querySelector('.click3').onclick = function(){
+    swal({
+      title: "しょっきをあらった？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image3.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit3();
+      }
+    });
+  };
+  document.querySelector('.click4').onclick = function(){
+    swal({
+      title: "せんたくものをほした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image4.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit4();
+      }
+    });
+  };
+  document.querySelector('.click5').onclick = function(){
+    swal({
+      title: "草むしりした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image5.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit5();
+      }
+    });
+  };
+  document.querySelector('.click6').onclick = function(){
+    swal({
+      title: "りょうりした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image6.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit6();
+      }
+    });
+  };
+  document.querySelector('.click7').onclick = function(){
+    swal({
+      title: "くつならべした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image7.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit7();
+      }
+    });
+  };
+  document.querySelector('.click8').onclick = function(){
+    swal({
+      title: "まどをふいた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image8.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit8();
+      }
+    });
+  };
+  document.querySelector('.click9').onclick = function(){
+    swal({
+      title: "かんやびんをすてた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image9.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit9();
+      }
+    });
+  };
+  document.querySelector('.click10').onclick = function(){
+    swal({
+      title: "ふつうゴミをすてた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image10.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit10();
+      }
+    });
+  };
+  document.querySelector('.click11').onclick = function(){
+    swal({
+      title: "そうじをした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image11.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit11();
+      }
+    });
+  };
+  document.querySelector('.click12').onclick = function(){
+    swal({
+      title: "おふろそうじをした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image12.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit12();
+      }
+    });
+  };
+  document.querySelector('.click13').onclick = function(){
+    swal({
+      title: "「ありがとう」と言われた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image13.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit13();
+      }
+    });
+  };
+  document.querySelector('.click14').onclick = function(){
+    swal({
+      title: "あらいものをした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image14.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit14();
+      }
+    });
+  };
+  document.querySelector('.click15').onclick = function(){
+    swal({
+      title: "おつかいをした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image15.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit15();
+      }
+    });
+  };
+  document.querySelector('.click16').onclick = function(){
+    swal({
+      title: "ゆうびんぶつをとってきた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image16.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit16();
+      }
+    });
+  };
+  document.querySelector('.click17').onclick = function(){
+    swal({
+      title: "「しょっきをしまった？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image17.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit17();
+      }
+    });
+  };
+  document.querySelector('.click18').onclick = function(){
+    swal({
+      title: "まどをあけてかんきをした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image18.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit18();
+      }
+    });
+  };
+  document.querySelector('.click19').onclick = function(){
+    swal({
+      title: "せんたくものをたたんだ？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image19.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit19();
+      }
+    });
+  };
+  document.querySelector('.click20').onclick = function(){
+    swal({
+      title: "ふとんをほした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image20.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit20();
+      }
+    });
+  };
+  document.querySelector('.click21').onclick = function(){
+    swal({
+      title: "しょっきをならべた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image21.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit21();
+      }
+    });
+  };
+  document.querySelector('.click22').onclick = function(){
+    swal({
+      title: "おかしづくりをした？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image22.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit22();
+      }
+    });
+  };
+  document.querySelector('.click23').onclick = function(){
+    swal({
+      title: "しょっきをはこんだ？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image23.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit23();
+      }
+    });
+  };
+  document.querySelector('.click24').onclick = function(){
+    swal({
+      title: "テーブルをふいた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image24.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit24();
+      }
+    });
+  };
+  document.querySelector('.click25').onclick = function(){
+    swal({
+      title: "りょうりをならべた？",
+      buttons: ["したよ", "してないよ"],
+      icon: '/game_first/image25.jpg',
+    }).then(function(result) {
+      if (result == true) {
+        console.log("してない時の処理")
+      } else {
+        console.log("した時の処理")
+        hit25();
+      }
+    });
+  };
+
+
+
   var score = <%= @current_user.first ||= 0 %>;
   var hitNum = [];
-  
+
 
     //スタート画面準備
     $("button").click(function(){
@@ -126,443 +480,492 @@
         $("#25").addClass("hit");
       }
 
-      
-      $("#numbers img").click(function(){
-          $(this).addClass("hit");
-      });
-      
-      $("#1").one('click', function(){
-        if ($("#2").hasClass("hit") && $("#3").hasClass("hit") && $("#4").hasClass("hit") && $("#5").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#6").hasClass("hit") && $("#11").hasClass("hit") && $("#16").hasClass("hit") && $("#21").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#7").hasClass("hit") && $("#13").hasClass("hit") && $("#19").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("1");
-      });
-      $("#2").one('click', function(){
-        if ($("#1").hasClass("hit") && $("#3").hasClass("hit") && $("#4").hasClass("hit") && $("#5").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#7").hasClass("hit") && $("#12").hasClass("hit") && $("#17").hasClass("hit") && $("#22").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("2");
-      });
-      $("#3").one('click', function(){
-        if ($("#1").hasClass("hit") && $("#2").hasClass("hit") && $("#4").hasClass("hit") && $("#5").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#8").hasClass("hit") && $("#13").hasClass("hit") && $("#18").hasClass("hit") && $("#23").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("3");
-      });
-      $("#4").one('click', function(){
-        if ($("#1").hasClass("hit") && $("#2").hasClass("hit") && $("#3").hasClass("hit") && $("#5").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#9").hasClass("hit") && $("#14").hasClass("hit") && $("#19").hasClass("hit") && $("#24").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("4");
-      });
-      $("#5").one('click', function(){
-        if ($("#1").hasClass("hit") && $("#2").hasClass("hit") && $("#3").hasClass("hit") && $("#4").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#10").hasClass("hit") && $("#15").hasClass("hit") && $("#20").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#9").hasClass("hit") && $("#13").hasClass("hit") && $("#17").hasClass("hit") && $("#21").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("5");
-      });
-      $("#6").one('click', function(){
-        if ($("#7").hasClass("hit") && $("#8").hasClass("hit") && $("#9").hasClass("hit") && $("#10").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#1").hasClass("hit") && $("#11").hasClass("hit") && $("#16").hasClass("hit") && $("#21").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("6");
-      });
-      $("#7").one('click', function(){
-        if ($("#6").hasClass("hit") && $("#8").hasClass("hit") && $("#9").hasClass("hit") && $("#10").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#2").hasClass("hit") && $("#12").hasClass("hit") && $("#17").hasClass("hit") && $("#22").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#1").hasClass("hit") && $("#13").hasClass("hit") && $("#19").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("7");
-      });
-      $("#8").one('click', function(){
-        if ($("#6").hasClass("hit") && $("#7").hasClass("hit") && $("#9").hasClass("hit") && $("#10").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#3").hasClass("hit") && $("#13").hasClass("hit") && $("#18").hasClass("hit") && $("#23").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("8");
-      });
-      $("#9").one('click', function(){
-        if ($("#6").hasClass("hit") && $("#7").hasClass("hit") && $("#8").hasClass("hit") && $("#10").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#4").hasClass("hit") && $("#14").hasClass("hit") && $("#19").hasClass("hit") && $("#24").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#5").hasClass("hit") && $("#13").hasClass("hit") && $("#17").hasClass("hit") && $("#21").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("9");
-      });
-      $("#10").one('click', function(){
-        if ($("#6").hasClass("hit") && $("#7").hasClass("hit") && $("#8").hasClass("hit") && $("#9").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#5").hasClass("hit") && $("#15").hasClass("hit") && $("#20").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("10");
-      });
-      $("#11").one('click', function(){
-        if ($("#12").hasClass("hit") && $("#13").hasClass("hit") && $("#14").hasClass("hit") && $("#15").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#1").hasClass("hit") && $("#6").hasClass("hit") && $("#16").hasClass("hit") && $("#21").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("11");
-      });
-      $("#12").one('click', function(){
-        if ($("#11").hasClass("hit") && $("#13").hasClass("hit") && $("#14").hasClass("hit") && $("#15").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#2").hasClass("hit") && $("#7").hasClass("hit") && $("#17").hasClass("hit") && $("#22").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("12");
-      });
-      $("#13").one('click', function(){
-        if ($("#11").hasClass("hit") && $("#12").hasClass("hit") && $("#14").hasClass("hit") && $("#15").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#3").hasClass("hit") && $("#8").hasClass("hit") && $("#18").hasClass("hit") && $("#23").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#1").hasClass("hit") && $("#7").hasClass("hit") && $("#19").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#5").hasClass("hit") && $("#9").hasClass("hit") && $("#17").hasClass("hit") && $("#21").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("13");
-      });
-      $("#14").one('click', function(){
-        if ($("#11").hasClass("hit") && $("#12").hasClass("hit") && $("#13").hasClass("hit") && $("#15").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#4").hasClass("hit") && $("#9").hasClass("hit") && $("#19").hasClass("hit") && $("#24").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("14");
-      });
-      $("#15").one('click', function(){
-        if ($("#11").hasClass("hit") && $("#12").hasClass("hit") && $("#13").hasClass("hit") && $("#14").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#5").hasClass("hit") && $("#10").hasClass("hit") && $("#20").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("15");
-      });
-      $("#16").one('click', function(){
-        if ($("#17").hasClass("hit") && $("#18").hasClass("hit") && $("#19").hasClass("hit") && $("#20").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#1").hasClass("hit") && $("#6").hasClass("hit") && $("#11").hasClass("hit") && $("#21").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("16");
-      });
-      $("#17").one('click', function(){
-        if ($("#16").hasClass("hit") && $("#18").hasClass("hit") && $("#19").hasClass("hit") && $("#20").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#2").hasClass("hit") && $("#7").hasClass("hit") && $("#12").hasClass("hit") && $("#22").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#5").hasClass("hit") && $("#9").hasClass("hit") && $("#13").hasClass("hit") && $("#21").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("17");
-      });
-      $("#18").one('click', function(){
-        if ($("#16").hasClass("hit") && $("#17").hasClass("hit") && $("#19").hasClass("hit") && $("#20").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#3").hasClass("hit") && $("#8").hasClass("hit") && $("#13").hasClass("hit") && $("#23").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("18");
-      });
-      $("#19").one('click', function(){
-        if ($("#16").hasClass("hit") && $("#17").hasClass("hit") && $("#18").hasClass("hit") && $("#20").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#4").hasClass("hit") && $("#9").hasClass("hit") && $("#14").hasClass("hit") && $("#24").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#1").hasClass("hit") && $("#7").hasClass("hit") && $("#13").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("19");
-      });
-      $("#20").one('click', function(){
-        if ($("#16").hasClass("hit") && $("#17").hasClass("hit") && $("#18").hasClass("hit") && $("#19").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#5").hasClass("hit") && $("#10").hasClass("hit") && $("#15").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("20");
-      });
-      $("#21").one('click', function(){
-        if ($("#22").hasClass("hit") && $("#23").hasClass("hit") && $("#24").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#1").hasClass("hit") && $("#6").hasClass("hit") && $("#11").hasClass("hit") && $("#16").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#5").hasClass("hit") && $("#9").hasClass("hit") && $("#13").hasClass("hit") && $("#17").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        }else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("21");
-      });
-      $("#22").one('click', function(){
-        if ($("#21").hasClass("hit") && $("#23").hasClass("hit") && $("#24").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#2").hasClass("hit") && $("#7").hasClass("hit") && $("#12").hasClass("hit") && $("#17").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        } else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("22");
-      });
-      $("#23").one('click', function(){
-        if ($("#21").hasClass("hit") && $("#22").hasClass("hit") && $("#24").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#3").hasClass("hit") && $("#8").hasClass("hit") && $("#13").hasClass("hit") && $("#18").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        } else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("23");
-      });
-      $("#24").one('click', function(){
-        if ($("#21").hasClass("hit") && $("#22").hasClass("hit") && $("#23").hasClass("hit") && $("#25").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#4").hasClass("hit") && $("#9").hasClass("hit") && $("#14").hasClass("hit") && $("#19").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        } else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("24");
-      });
-      $("#25").one('click', function(){
-        if ($("#21").hasClass("hit") && $("#22").hasClass("hit") && $("#23").hasClass("hit") && $("#24").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#5").hasClass("hit") && $("#10").hasClass("hit") && $("#15").hasClass("hit") && $("#20").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($("#1").hasClass("hit") && $("#7").hasClass("hit") && $("#13").hasClass("hit") && $("#19").hasClass("hit")){
-          score += 50;
-          $("#score span").html(score);
-        } else if ($(this).hasClass("hit")){
-          score += 10;
-          $("#score span").html(score);
-        } else {
-          score += 0;
-          $("#score span").html(score);
-        }
-        hitNum.push("25");
-      });
+
+
+
     });
-  
+
+    function hit1(){
+      $("#1").addClass("hit");
+      score += 10;
+      if ($("#2").hasClass("hit") && $("#3").hasClass("hit") && $("#4").hasClass("hit") && $("#5").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#6").hasClass("hit") && $("#11").hasClass("hit") && $("#16").hasClass("hit") && $("#21").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#7").hasClass("hit") && $("#13").hasClass("hit") && $("#19").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("1");
+    }
+    function hit2(){
+      $("#2").addClass("hit");
+      score += 10;
+      if ($("#1").hasClass("hit") && $("#3").hasClass("hit") && $("#4").hasClass("hit") && $("#5").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#7").hasClass("hit") && $("#12").hasClass("hit") && $("#17").hasClass("hit") && $("#22").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("2");
+    }
+    function hit3(){
+      $("#3").addClass("hit");
+      score += 10;
+      if ($("#1").hasClass("hit") && $("#2").hasClass("hit") && $("#4").hasClass("hit") && $("#5").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#8").hasClass("hit") && $("#13").hasClass("hit") && $("#18").hasClass("hit") && $("#23").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("3");
+    }
+    function hit4(){
+      $("#4").addClass("hit");
+      score += 10;
+      if ($("#1").hasClass("hit") && $("#2").hasClass("hit") && $("#3").hasClass("hit") && $("#5").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#9").hasClass("hit") && $("#14").hasClass("hit") && $("#19").hasClass("hit") && $("#24").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("4");
+    }
+    function hit5(){
+      $("#5").addClass("hit");
+      score += 10;
+      if ($("#1").hasClass("hit") && $("#2").hasClass("hit") && $("#3").hasClass("hit") && $("#4").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#10").hasClass("hit") && $("#15").hasClass("hit") && $("#20").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#9").hasClass("hit") && $("#13").hasClass("hit") && $("#17").hasClass("hit") && $("#21").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("5");
+    }
+    function hit6(){
+      $("#6").addClass("hit");
+      score += 10;
+      if ($("#7").hasClass("hit") && $("#8").hasClass("hit") && $("#9").hasClass("hit") && $("#10").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#1").hasClass("hit") && $("#11").hasClass("hit") && $("#16").hasClass("hit") && $("#21").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("6");
+    }
+    function hit7(){
+      $("#7").addClass("hit");
+      score += 10;
+      if ($("#6").hasClass("hit") && $("#8").hasClass("hit") && $("#9").hasClass("hit") && $("#10").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#2").hasClass("hit") && $("#12").hasClass("hit") && $("#17").hasClass("hit") && $("#22").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#1").hasClass("hit") && $("#13").hasClass("hit") && $("#19").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("7");
+    }
+    function hit8(){
+      $("#8").addClass("hit");
+      score += 10;
+      if ($("#6").hasClass("hit") && $("#7").hasClass("hit") && $("#9").hasClass("hit") && $("#10").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#3").hasClass("hit") && $("#13").hasClass("hit") && $("#18").hasClass("hit") && $("#23").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("8");
+    }
+    function hit9(){
+      $("#9").addClass("hit");
+      score += 10;
+      if ($("#6").hasClass("hit") && $("#7").hasClass("hit") && $("#8").hasClass("hit") && $("#10").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#4").hasClass("hit") && $("#14").hasClass("hit") && $("#19").hasClass("hit") && $("#24").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#5").hasClass("hit") && $("#13").hasClass("hit") && $("#17").hasClass("hit") && $("#21").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("9");
+    }
+    function hit10(){
+      $("#10").addClass("hit");
+      score += 10;
+      if ($("#6").hasClass("hit") && $("#7").hasClass("hit") && $("#8").hasClass("hit") && $("#9").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#5").hasClass("hit") && $("#15").hasClass("hit") && $("#20").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("10");
+    }
+    function hit11(){
+      $("#11").addClass("hit");
+      score += 10;
+      if ($("#12").hasClass("hit") && $("#13").hasClass("hit") && $("#14").hasClass("hit") && $("#15").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#1").hasClass("hit") && $("#6").hasClass("hit") && $("#16").hasClass("hit") && $("#21").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("11");
+    }
+    function hit12(){
+      $("#12").addClass("hit");
+      score += 10;
+      if ($("#11").hasClass("hit") && $("#13").hasClass("hit") && $("#14").hasClass("hit") && $("#15").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#2").hasClass("hit") && $("#7").hasClass("hit") && $("#17").hasClass("hit") && $("#22").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("12");
+    }
+    function hit13(){
+      $("#13").addClass("hit");
+      score += 10;
+      if ($("#11").hasClass("hit") && $("#12").hasClass("hit") && $("#14").hasClass("hit") && $("#15").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#3").hasClass("hit") && $("#8").hasClass("hit") && $("#18").hasClass("hit") && $("#23").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#1").hasClass("hit") && $("#7").hasClass("hit") && $("#19").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#5").hasClass("hit") && $("#9").hasClass("hit") && $("#17").hasClass("hit") && $("#21").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("13");
+    }
+    function hit14(){
+      $("#14").addClass("hit");
+      score += 10;
+      if ($("#11").hasClass("hit") && $("#12").hasClass("hit") && $("#13").hasClass("hit") && $("#15").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#4").hasClass("hit") && $("#9").hasClass("hit") && $("#19").hasClass("hit") && $("#24").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("14");
+    }
+    function hit15(){
+      $("#15").addClass("hit");
+      score += 10;
+      if ($("#11").hasClass("hit") && $("#12").hasClass("hit") && $("#13").hasClass("hit") && $("#14").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#5").hasClass("hit") && $("#10").hasClass("hit") && $("#20").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("15");
+    }
+    function hit16(){
+      $("#16").addClass("hit");
+      score += 10;
+      if ($("#17").hasClass("hit") && $("#18").hasClass("hit") && $("#19").hasClass("hit") && $("#20").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#1").hasClass("hit") && $("#6").hasClass("hit") && $("#11").hasClass("hit") && $("#21").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("16");
+    }
+    function hit17(){
+      $("#17").addClass("hit");
+      score += 10;
+      if ($("#16").hasClass("hit") && $("#18").hasClass("hit") && $("#19").hasClass("hit") && $("#20").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#2").hasClass("hit") && $("#7").hasClass("hit") && $("#12").hasClass("hit") && $("#22").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#5").hasClass("hit") && $("#9").hasClass("hit") && $("#13").hasClass("hit") && $("#21").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("17");
+    }
+    function hit18(){
+      $("#18").addClass("hit");
+      score += 10;
+      if ($("#16").hasClass("hit") && $("#17").hasClass("hit") && $("#19").hasClass("hit") && $("#20").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#3").hasClass("hit") && $("#8").hasClass("hit") && $("#13").hasClass("hit") && $("#23").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("18");
+    }
+    function hit19(){
+      $("#19").addClass("hit");
+      score += 10;
+      if ($("#16").hasClass("hit") && $("#17").hasClass("hit") && $("#18").hasClass("hit") && $("#20").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#4").hasClass("hit") && $("#9").hasClass("hit") && $("#14").hasClass("hit") && $("#24").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#1").hasClass("hit") && $("#7").hasClass("hit") && $("#13").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("19");
+    }
+    function hit20(){
+      $("#20").addClass("hit");
+      score += 10;
+      if ($("#16").hasClass("hit") && $("#17").hasClass("hit") && $("#18").hasClass("hit") && $("#19").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#5").hasClass("hit") && $("#10").hasClass("hit") && $("#15").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("20");
+    }
+    function hit21(){
+      $("#21").addClass("hit");
+      score += 10;
+      if ($("#22").hasClass("hit") && $("#23").hasClass("hit") && $("#24").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#1").hasClass("hit") && $("#6").hasClass("hit") && $("#11").hasClass("hit") && $("#16").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#5").hasClass("hit") && $("#9").hasClass("hit") && $("#13").hasClass("hit") && $("#17").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      }else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("21");
+    }
+    function hit22(){
+      $("#22").addClass("hit");
+      score += 10;
+      if ($("#21").hasClass("hit") && $("#23").hasClass("hit") && $("#24").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#2").hasClass("hit") && $("#7").hasClass("hit") && $("#12").hasClass("hit") && $("#17").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      } else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("22");
+    }
+    function hit23(){
+      $("#23").addClass("hit");
+      score += 10;
+      if ($("#21").hasClass("hit") && $("#22").hasClass("hit") && $("#24").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#3").hasClass("hit") && $("#8").hasClass("hit") && $("#13").hasClass("hit") && $("#18").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      } else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("23");
+    }
+    function hit24(){
+      $("#24").addClass("hit");
+      score += 10;
+      if ($("#21").hasClass("hit") && $("#22").hasClass("hit") && $("#23").hasClass("hit") && $("#25").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#4").hasClass("hit") && $("#9").hasClass("hit") && $("#14").hasClass("hit") && $("#19").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      } else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("24");
+    }
+    function hit25(){
+      $("#25").addClass("hit");
+      score += 10;
+      if ($("#21").hasClass("hit") && $("#22").hasClass("hit") && $("#23").hasClass("hit") && $("#24").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#5").hasClass("hit") && $("#10").hasClass("hit") && $("#15").hasClass("hit") && $("#20").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($("#1").hasClass("hit") && $("#7").hasClass("hit") && $("#13").hasClass("hit") && $("#19").hasClass("hit")){
+        score += 50;
+        $("#score span").html(score);
+      } else if ($(this).hasClass("hit")){
+        score += 10;
+        $("#score span").html(score);
+      } else {
+        score += 0;
+        $("#score span").html(score);
+      }
+      hitNum.push("25");
+    }
+
 
   $(".save").click(function () {
     $.ajax({
